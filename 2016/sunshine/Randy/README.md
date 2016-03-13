@@ -20,6 +20,13 @@ for i in range(5):
     s[l+i] = (s[l+i] + a) % 256
 
 ```
-So it's very easy to see that we can [produce](./randy.py) reverse function and receive our flag:
+Further we see such block:
+![Branch](./branch.png)
 
-Ehm, I forgot to save, so we'll be glad to receive PR for fixing this line :)
+So here we simple need to enter the value that equals to local_18h. If we look in first screenshot of code we see that it returned value of random function.
+
+So it's very easy to see that we can [produce](./randy.py) reverse function for retrieving produced random value and receive our flag:
+
+Ehm, I forgot to save it, so we'll be glad to receive PR for fixing this line :)
+
+Note: I guess it's actually can work by simple bruteforcing that value due to we know the seed of rand
