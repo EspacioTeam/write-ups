@@ -1,15 +1,17 @@
-By running binary we can see strange symbols at debug info and they actually change every launch
+By running [binary](./randy_noflag) we can see strange symbols at debug info and they actually change every launch
 >./randy_noflag 
+>
 >Welcome to Randy's TinyPoker! DebugInfo: g�[
+>
 >We've dealt you your hand face down, please enter it:
 
-Ok, let's dive into the binary. We can see that that string was changed its from:
+Ok, let's dive into the binary. We can see that the string changed its from:
 >Welcome to Randy's TinyPoker! DebugInfo: AAAA
 
-It adds to each byte of the string (at "AAAA") corresponding byte from received random string:
+Code below adds to each byte of the substring "AAAA" corresponding byte from received random int:
 ![Debug](./debug_fixes.png)
 
-It's quite big piece of code, but actually its logic is as simple as this pseudocode:
+It's quite big piece of code, but here we can see repeating blocks of opcodes. So logic can be rewrited in loop and it is as simple as this pseudocode:
 ```python
 r = rand()
 s = "Welcome to Randy's TinyPoker! DebugInfo: AAAA"
@@ -21,6 +23,7 @@ for i in range(5):
 
 ```
 Further we see such block:
+
 ![Branch](./branch.png)
 
 So here we simple need to enter the value that equals to local_18h. If we look in first screenshot of code we see that it returned value of random function.
