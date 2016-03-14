@@ -30,6 +30,22 @@ So here we simple need to enter the value that equals to local_18h. If we look i
 
 So it's very easy to see that we can [produce](./randy.py) reverse function for retrieving produced random value and receive our flag:
 
-Ehm, I forgot to save it, so we'll be glad to receive PR for fixing this line :)
+```python
+def rev(x):
+	ret=''
+	for i in x:
+		if ord(i)-0x41 < 0:
+			ret+=chr(ord(i)-0x41+0xff+1)
+		else:
+			ret+=chr(ord(i)-0x41)
+	return ret[::-1]
 
-Note: I guess it's actually can work by simple bruteforcing that value due to we know the seed of rand
+from pwn import *
+#s=process('./randy_noflag')
+s=remote('4.31.182.242',9002)
+r=s.recv(100,timeout=1)
+print r
+
+s.sendline(rev(r[41:45]))
+print s.recv(100,timeout=1)
+```
