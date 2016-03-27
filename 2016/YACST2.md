@@ -16,12 +16,19 @@
 > [gist2](https://gist.github.com/volalex/4c62beaa721807dbc139) Adding a
 > Noise
 
+
 **Algorithm**
+
 1. Send request to the site, get remaining number of captchas.
+
 2. Download captcha using **curl** (don't ask me why!).
+
 3. Send it to the *Google Speech Recognizer* using python module **speech_recognition**
+
 4. Send numbers to the server.
+
 5. Repeat until you receive flag.
+
 
 
 
