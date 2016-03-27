@@ -18,7 +18,7 @@ Go there and make move to the right.
 ***Repeat until you get flag***
 
 
-```
+```python
 from pprint import pprint
 import re
 from pwn import *
