@@ -13,7 +13,7 @@ Use BFS to find all hidden cells reachable from current position. Add them to th
 ***Solving phase***
 
 When we scouted all maze, use BFS to find the path to the very right/bottom cell.
-Then, make move to the right.
+Go there and make move to the right.
 
 ***Repeat until you get flag***
 
