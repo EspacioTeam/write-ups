@@ -218,4 +218,4 @@ while True:
 
 After 30 rounds I got the flag: 
 
-> VolgaCTF{Sound IS L1ke M@th if A+B=C THEN C-B=A}
+> VolgaCTF{eurisco!}
