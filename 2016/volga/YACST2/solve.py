@@ -40,12 +40,12 @@ while times > 0:
         except:
             pass
 
-	    # download captcha
+	# download captcha
         os.system(Q_CAPTCHA)
 
-	    # each captcha influenced by noise (30..220 Hz)
-	    # here I tried to filter it. But Google Speech 
-	    # recognition worked well without any preprocessing
+	# each captcha influenced by noise (30..220 Hz)
+	# here I tried to filter it. But Google Speech 
+	# recognition worked well without any preprocessing
         '''
         wr = wave.open("cap.wav", 'r')
         ww = wave.open('captcha.wav', 'w')
@@ -103,8 +103,8 @@ while times > 0:
 
             send_http(W, Q_CAPTCHA_SEND)
 
-		    # server sends 302 redirect, so we have to 
-		    # resend data to the / 
+	    # server sends 302 redirect, so we have to 
+	    # resend data to the / 
             request = W.recv()
 
             Q_CAPTCHA_SEND = [
