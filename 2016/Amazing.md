@@ -7,9 +7,11 @@
 > **nc amazing.2016.volgactf.ru 45678**
 
 ***Scouting phase***
+
 Use BFS to find all reachable hidden cells from current position. Add them to the stack. Repeat until stack is not empty or until there are no hidden cells on the map.
 
 ***Solving phase***
+
 When we scouted all maze, use BFS to find the path to the very right/bottom cell.
 Then, make move to the right.
 
