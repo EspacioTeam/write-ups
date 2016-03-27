@@ -26,7 +26,7 @@
 
 [solve.py](./solve.py)
 
-But last captcha I had to solve by myself.
+It took 4 hours to solve 2k captchas. But last captcha I had to solve by myself (for sure :).
 
 Flag is:
 
