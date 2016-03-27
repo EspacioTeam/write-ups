@@ -8,7 +8,7 @@
 
 ***Scouting phase***
 
-Use BFS to find all reachable hidden cells from current position. Add them to the stack. Repeat until stack is not empty or until there are no hidden cells on the map.
+Use BFS to find all hidden cells reachable from current position. Add them to the stack. Repeat until stack is not empty or until there are no hidden cells on the map.
 
 ***Solving phase***
 
