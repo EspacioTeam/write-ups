@@ -18,7 +18,7 @@ Go there and make move to the right.
 ***Repeat until you get flag***
 
 
-[Solve.py](/solve.py)
+[solve.py](/blob/master/2016/volga/Amazing/solve.py)
 
 
 [First round in bot's eyes](http://pastebin.com/RQmP1EDr)
