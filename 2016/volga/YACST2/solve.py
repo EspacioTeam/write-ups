@@ -25,7 +25,7 @@ Q_CAPTCHA = 'curl -s --cookie "JSESSIONID=Kf0nf9fkvCjrxwx9D1dg8B6CobY_Ptl0hBQpk1
 # http://yacst2.2016.volgactf.ru/captcha
 
 
-times = 2000
+times = 3000
 while times > 0:
     try:
         # reconnect every time, to prevent any drops or any disgusting things
